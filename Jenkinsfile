@@ -43,8 +43,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sshagent(['tomcat']) {
-                    sh 'scp -o StrictHostKeyChecking=no target/demo.war ubuntu@43.205.228.91:/home/ubuntu/'
-                    sh 'ssh ubuntu@43.205.228.91 "sudo mv /home/ubuntu/demo.war /opt/tomcat/webapps/"'
+                    sh 'scp -o StrictHostKeyChecking=no target/demo.war ubuntu@13.233.184.189:/home/ubuntu/'
+                    sh 'ssh ubuntu@13.233.184.189 "sudo mv /home/ubuntu/demo.war /opt/tomcat/webapps/"'
                 }
             }
         }
