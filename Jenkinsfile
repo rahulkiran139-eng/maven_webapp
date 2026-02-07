@@ -7,12 +7,7 @@ pipeline {
     }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/rahulkiran139-eng/maven_webapp.git'
-            }
-        }
-
+       
         stage('Build with Maven') {
             steps {
                 sh 'mvn clean package'
